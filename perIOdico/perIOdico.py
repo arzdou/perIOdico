@@ -44,9 +44,6 @@ class perIOdico:
 				print("I could not find first page for that day")
 			return
 
-		if self.verbose:
-			print("Extracted correctly")
-
 	def open_image(path):
 	    viewer = {'linux':'xdg-open',
 	                                  'win32':'explorer',
