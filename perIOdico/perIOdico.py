@@ -4,7 +4,8 @@ from datetime import datetime
 import requests
 import shutil
 
-import os
+import sys
+import subprocess
 
 
 def get_date():
@@ -46,4 +47,9 @@ class perIOdico:
 		if self.verbose:
 			print("Extracted correctly")
 
-		os.system('xdg-open ./img.jpg')
+	def open_image(path):
+	    viewer = {'linux':'xdg-open',
+	                                  'win32':'explorer',
+	                                  'darwin':'open'}[sys.platform]
+
+	    subprocess.run([viewer, 'img.jpg'])
