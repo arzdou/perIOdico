@@ -12,3 +12,8 @@ pip install perIOdico
 ```
 
 and simply use the command `perIOdico` in a terminal to run it.
+
+## Future development
+
+- Add a variety of newspapers as well as a country / region detection
+- Create a twiter bot
