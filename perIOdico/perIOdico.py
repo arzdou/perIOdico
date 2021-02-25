@@ -45,8 +45,5 @@ class perIOdico:
 			return
 
 	def open_image(path):
-	    viewer = {'linux':'xdg-open',
-	                                  'win32':'explorer',
-	                                  'darwin':'open'}[sys.platform]
-
+	    viewer = {'linux':'xdg-open', 'win32':'explorer', 'darwin':'open'}[sys.platform]
 	    subprocess.run([viewer, 'img.jpg'])
