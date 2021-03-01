@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="perIOdico",
-    version="0.1.3",
+    version="0.1.4",
     author="Arzdou",
     author_email="arzdou@gmail.com",
     description="Download the first page of a newspaper given a date",

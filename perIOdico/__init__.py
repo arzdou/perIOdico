@@ -1,1 +1,1 @@
-from .perIOdico import perIOdico, get_date
+from .perIOdico import perIOdico
