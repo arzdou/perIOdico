@@ -5,10 +5,10 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="perIOdico",
-    version="0.1.2",
+    version="0.1.3",
     author="Arzdou",
     author_email="arzdou@gmail.com",
-    description="Download the first page of a date",
+    description="Download the first page of a newspaper given a date",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/jtl125/perIOdico",

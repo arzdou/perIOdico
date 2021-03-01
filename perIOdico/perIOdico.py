@@ -1,4 +1,3 @@
-#venv/bin/python3.8
 from bs4 import BeautifulSoup
 from datetime import datetime
 import requests
@@ -8,20 +7,20 @@ import sys
 import subprocess
 
 
-def get_date():
-	while True:
-		try:
-			date_str = input("When were you born? (DD-MM-YYYY): ")
-			return datetime.strptime(date_str, '%d-%m-%Y')
-		except ValueError:
-			print("Date is incorrect, try again")
-
-
 class perIOdico:
-	def __init__(self, date, verbose=False):
+	def __init__(self, verbose=False):
 		self.verbose = verbose
-		str_date = date.strftime('%Y/%m/%d')
-		self.url = 'https://elpais.com/hemeroteca/elpais/portadas/{}'.format(str_date) 
+		str_date = self.get_date().strftime('%Y/%m/%d')
+		self.url = 'https://elpais.com/hemeroteca/elpais/portadas/{}'.format(str_date)
+
+	@staticmethod
+	def get_date():
+		while True:
+			try:
+				date_str = input("When were you born? (DD-MM-YYYY): ")
+				return datetime.strptime(date_str, '%d-%m-%Y')
+			except ValueError:
+				print("Date is incorrect, try again")
 
 	def get_image(self):
 		try:
@@ -44,6 +43,7 @@ class perIOdico:
 				print("I could not find first page for that day")
 			return
 
-	def open_image(path):
-	    viewer = {'linux':'xdg-open', 'win32':'explorer', 'darwin':'open'}[sys.platform]
-	    subprocess.run([viewer, 'img.jpg'])
+	@staticmethod
+	def open_image():
+		viewer = {'linux': 'xdg-open', 'win32': 'explorer', 'darwin': 'open'}[sys.platform]
+		subprocess.run([viewer, 'img.jpg'])
