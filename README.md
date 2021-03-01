@@ -1,4 +1,4 @@
-<img src="https://github.com/jtl125/perIOdico/blob/master/main_logo.png" width="400" align="right">
+<img src="https://raw.githubusercontent.com/jtl125/perIOdico/master/main_logo.png" width="400" align="right">
 
 # perIOdico
 Small program that obtains the front page of El Pais for a given date
