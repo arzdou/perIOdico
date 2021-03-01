@@ -13,3 +13,6 @@ venv/
 
 # Image downloaded
 img.jpg
+
+#IDE
+.idea/
